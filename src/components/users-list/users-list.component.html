@@ -1,0 +1,31 @@
+<main class="py-5">
+
+        <h1 class="text-center pb-4"> Users </h1>
+
+        <div class=" w-50 mb-3 mx-auto">
+        <input type="text" class=" rounded  p-2 w-100 " placeholder="searching..."  [(ngModel)]="search"  (keydown)="onSearch()">
+
+        </div>
+        <div class="container">
+                    <div class="row g-5">
+                        @for (user of filteredUsers; track $index) {
+                            <div class="col-md-6">
+                                <div>
+                                    <div class="card text-center ">
+                                        <h5 class="card-header ">{{user.id}}</h5>
+                                        <div class="card-body p-3">
+                                          <h5 class="card-title">Name :  {{user.name}}</h5>
+                                          <p class="card-text my-2 ">Email : <span class="text-danger"> {{user.email}}</span></p>
+                                          <p class="card-text mt-0">Company Name : {{user.company.name}}</p>
+                                          <button [routerLink]="['/userDetails' , user.id]" class="btn btn-danger"> View Details</button>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+        </div>
+
+
+
+</main>

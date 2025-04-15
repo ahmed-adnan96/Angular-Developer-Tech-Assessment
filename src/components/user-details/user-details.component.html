@@ -1,0 +1,23 @@
+<section class="py-5 bg-light">
+        <h2 class="h1 text-center mb-5  ">User Details</h2>
+        <div class="container">
+                <div class="row">
+                        <div class="col">
+                            <div class="text-center border shadow p-3 w-75 mx-auto rounded bg-dark text-white">
+                                <h3 class="">{{userDetails.username}}</h3>
+                                <h4>Phone Number : {{userDetails.phone}}</h4>
+                                <h4>Website : {{userDetails.website}}</h4>
+                                <h4>Address</h4>
+                                <ul class="d-flex justify-content-evenly align-items-center">
+                                    <li> Street :  {{userDetails.address.street}}</li>
+                                    <li>Suite : {{userDetails.address.suite}}</li>
+                                    <li>City :  {{userDetails.address.city}}</li>
+                                    <li>Zipcode: {{userDetails.address.zipcode}}</li>
+                                </ul>
+                                <button class="btn btn-warning" routerLink="/users">Back To users </button>
+                            </div>
+                        </div>
+                </div>
+        </div>
+
+</section>
